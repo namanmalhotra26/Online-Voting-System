@@ -1,0 +1,14 @@
+<% layout('layouts/boilerplate') %>
+
+    <center>
+        <% for(let ovn of ovns) {%>
+            <h3>
+                <h1>
+                    <%=ovn.title %>
+                </h1> got <b>
+                    <%=ovn.noofvotes%>
+                </b> votes.
+            </h3><br>
+            ___________________________________
+            <% } %>
+    </center>

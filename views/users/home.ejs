@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boilerplate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body class="d-flex flex-column vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">Online Voting System</a>
+            <div class="row">
+                <div class="col-3">
+                    <div class="navbar-nav">
+                        <a class="nav-link btn btn-light " style="color:black; margin-right: 10px;" aria-current="page"
+                            href="/">Login</a>
+                        <a class="nav-link btn btn-info" style="color:black; margin-right: 10px;"
+                            href="/signup">Signup</a>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </nav>
+    <%- include('../partials/flash')%>
+        <div class="row" style="margin-top:40px ;">
+            <div class="col-6 offset-3">
+                <div class="card">
+                    <center> <img
+                            src="https://2.bp.blogspot.com/-bFK78T72o9w/WSKduKlw-bI/AAAAAAAAJr0/mEvsCwrShlIj7xcgu8cf9gE5PB_3-MvMwCLcB/s1600/National_Emblem_India.jpg "
+                            card-img-top" alt="..." height="40%" width="40%" style="margin-top:20px ;"></center>
+
+                    <form action="/" method="post" class="row g-3">
+                        <div class="col-md-5" style="margin-left:30px ; margin-right: 60px;">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username">
+                        </div>
+                        <div class="col-md-5" style=" margin-right:10px ; ">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password">
+                        </div>
+                        <div class="col-12">
+                            <center> <button type="submit" class="btn btn-primary d-flex"
+                                    style="margin-bottom:30px ;">Log
+                                    in</button></center>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+        <footer class="footer bg-dark py-3 mt-auto">
+            <div class="container">
+                <span class="text-muted">&copy Online Voting System 2022</span>
+
+
+            </div>
+        </footer>
+</body>
+
+</html>

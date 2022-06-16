@@ -1,0 +1,55 @@
+<% layout('layouts/boilerplate') %>
+    <div style="margin-left: 20px; margin-top: 20px;">
+        <form action="/signup" method="post" class="row validated" novalidate>
+            <div class="col">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" required
+                    value="<%=user.username %>">
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+
+            <div class="col-11">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="address" name="address" required value="<%=user.address %>">
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="col-md-2">
+                <label for="number" class="form-label">Number resgistered with Adhaar</label>
+                <input type="number" class="form-control" id="number" name="number" required value="<%=user.number %>">
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="col-11">
+                <label for="adhaar" class="form-label">Adhaar Number</label>
+                <input type="text" class="form-control" id="adhaar" name="adhaar" required value="<%=user.adhaar %>">
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="col-md-2">
+                <label for="otp" class="form-label">Enter OTP</label>
+                <input type="number" class="form-control" id="otp" name="otp" required>
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="col-md-6">
+                <label for="city" class="form-label">City</label>
+                <input type="text" class="form-control" id="city" name="city" required value="<%=user.city %>">
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="col-md-6">
+                <label for="state" class="form-label">State</label>
+                <input type="text" class="form-control" id="state" name="state" required value="<%=user.state %>">
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+
+            <div class="col-md-2">
+                <label for="zip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="zip" name="zip" required value="<%=user.zip %>">
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="mb-3">
+                <label class="from-label" for="image">Image Url</label>
+                <input class="form-control" type="text" id="image" name="image" required value="<%=user.image %>">
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="col-11">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+        </form>

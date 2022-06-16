@@ -1,0 +1,90 @@
+<% layout('layouts/boilerplate') %>
+    <% if(currentUser.vote===true){ %>
+        <center>
+            <h1>Thankyou for voting!!!!</h1>
+            <% if(a===1){ %>
+
+                <form action="/party/result" method="POST" d-inline">
+                    <button id="myBtn" class="btn btn-danger card-link ms-3 ">
+                        Show Result
+                    </button>
+                    <% } %>
+                        <% if(a===0) {%>
+                            <h2>Results will be out shortly</h2>
+                            <% } %>
+
+
+                </form>
+        </center>
+        <br>
+        <% } %>
+            <% if( currentUser._id=='62ab23a98e86ddd41ba3afc5' ){ %>
+
+                <form action="/party/disable?_method=PUT" method="POST" class="d-inline">
+                    <center> <button class="btn btn-info" ">Disable </button>
+                        </form>
+                        <form action=" /party/enable?_method=PUT" method="POST" class="d-inline">
+                            <button class="btn btn-primary" ">Enable </button></form>
+                    <% } %>
+                </center>
+                <h1>All Parties</h1>
+                <ul class=" mb-4">
+                                <% for(let ovn of ovns) {%>
+                                    <div class="card mb-8">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img class="img-fluid" src="<%= ovn.image %> ">
+                                            </div>
+
+
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">
+                                                        <%=ovn.title %>
+                                                    </h5>
+                                                    <small class="card-text text-muted">
+                                                        <%=ovn.year %>
+                                                    </small>
+                                                    <p class="card-text">
+                                                        Slogan: <%=ovn.slogan %>
+                                                    </p>
+
+                                                    <div class="card-body">
+                                                        <form action="/party/<%=ovn._id%>" class="d-inline">
+                                                            <button class="btn btn-primary card-link ">
+                                                                Show details for: <%=ovn.title%>
+                                                            </button>
+
+                                                        </form>
+                                                        <% if(currentUser.vote===false ){ %>
+                                                            <form action="/party/b/<%=ovn._id%>?_method=PUT"
+                                                                method="POST" class="d-inline">
+                                                                <button id="a" onclick="ab"
+                                                                    class="btn btn-danger card-link ms-3 ">
+                                                                    Vote!
+                                                                </button>
+                                                                <% } %>
+                                                            </form>
+
+                                                    </div>
+
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <%}%>
+                                        </ul>
+                                        <script>
+                                            function disableBtn() {
+                                                document.getElementById("myBtn").disabled = true;
+                                            }
+
+                                            function enableBtn() {
+                                                document.getElementById("myBtn").disabled = false;
+                                            }
+                                        </script>

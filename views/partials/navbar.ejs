@@ -1,0 +1,19 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Online Voting System</a>
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav" style="align-items: right;">
+                <a class="nav-link " aria-current="page" href="/profile/<%=currentUser._id %> ">Profile</a>
+                <a class="nav-link" href="/party/main">Voting Zone</a>
+                <% if( currentUser._id=='62ab23a98e86ddd41ba3afc5' ){ %>
+                    <a class="nav-link" href="/party/new">New party</a>
+                    <% } %>
+            </div>
+        </div>
+        <a href="/logout" class=" btn btn-light " style="color:black; ">Logout</a>
+    </div>
+</nav>

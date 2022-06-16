@@ -1,0 +1,39 @@
+<% layout('layouts/boilerplate') %>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card">
+                <img src="<%= ovns.image %>" class=" card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= ovns.title %>
+                    </h5>
+
+                    <p class="card-text">
+                        <%= ovns.description %>
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-muted">
+                        Formed in year: <%= ovns.year %>
+                    </li>
+                    <li class="list-group-item ">
+                        Slogan: <%= ovns.slogan %>
+                    </li>
+
+
+                </ul>
+
+                <div class="card-body">
+                    <a href="/party/main" class="card-link btn btn-primary">All parties</a>
+                    <% if(currentUser._id=='62825f181a11504b80c1cef6' ){ %>
+                        <a href="/party/<%=ovns._id%>/edit" class="card-link btn btn-success">Edit</a>
+                        <form action="/party/<%=ovns._id%>?_method=DELETE" method="POST" class="d-inline">
+                            <button class="btn btn-danger card-link " style="margin-left:15px;">Delete</button>
+                        </form>
+                        <% } %>
+                </div>
+
+            </div>
+
+
+        </div>

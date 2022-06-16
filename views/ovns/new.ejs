@@ -1,0 +1,41 @@
+<% layout('layouts/boilerplate') %>
+    <div class="row">
+        <h1 class="text-center">New Party</h1>
+        <div class="col-6 offset-3">
+            <h1>Add new data</h1>
+            <form action="/party" method="POST" novalidate class="validated">
+                <div class="mb-3">
+                    <label class="from-label" for="title">Title</label>
+                    <input class="form-control" type="text" id="title" name="ovns[title]" required>
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="mb-3">
+                    <label class="from-label" for="year">Year</label>
+                    <input class="form-control" type="number" id="year" name="ovns[year]" required>
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="mb-3">
+                    <label class="from-label" for="image">Image Url</label>
+                    <input class="form-control" type="text" id="image" name="ovns[image]" required>
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="mb-3">
+                    <label class="from-label" for="slogan">Slogan </label>
+                    <input class="form-control" type="text" id="slogan" name="ovns[slogan]" required>
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="from-label" for="description">Description</label>
+                    <textarea class="form-control" type="text" id="description" name="ovns[description]"
+                        required></textarea>
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-success">Add Party</button>
+                </div>
+            </form>
+
+
+        </div>
+    </div>

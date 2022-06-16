@@ -1,0 +1,56 @@
+<% layout('layouts/boilerplate') %>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card">
+                <center> <img src="<%= user.image %>" class=" card-img-top mb-3" style="width:50%; height:50%;"
+                        alt="...">
+                </center>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Username: <%= user.username %>
+                    </h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item ">
+                        Registered Number: <%= user.number %>
+                    </li>
+                    <li class="list-group-item ">
+                        Address <%= user.address %>
+                    </li>
+                    <li class="list-group-item ">
+                        Adhaar Number <%= user.adhaar %>
+                    </li>
+
+                    <li class="list-group-item ">
+                        City: <%= user.city %>
+                    </li>
+
+                    <li class="list-group-item ">
+                        State <%= user.state %>
+                    </li>
+
+                    <li class="list-group-item ">
+                        Zip: <%= user.zip %>
+                    </li>
+                    <li class="list-group-item ">
+                        Voting status:
+                        <% if( user.vote===false ){ %>
+                            Not voted
+                            <% } else{%>Voted <% } %>
+                    </li>
+
+
+
+                </ul>
+
+                <div class="card-body">
+                    <a href="/party/main" class="card-link btn btn-primary">All parties</a>
+
+
+
+                </div>
+
+            </div>
+
+
+        </div>
